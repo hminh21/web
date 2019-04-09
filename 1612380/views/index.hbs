@@ -1,0 +1,81 @@
+<div class="container-fluid">
+
+    <div class="row">
+        <h1>{{ title }}</h1>
+    </div>
+    <br>
+
+    <form>
+        <!--line 1-->
+        <div class="row">
+            <div class="col-md-1">
+                <label for="FirstInput">Số thứ nhất</label>
+            </div>
+
+            <div class="col-md-2.5">
+                <input id="FirstInput" name="FirstInput" type="text" onblur="checkValidate(this.form.FirstInput)">
+            </div>
+
+            <div class="col-md-1">
+                <input id="Plus" name="Sign" type="radio" value="+">
+                <label for="Plus">Cộng</label>
+            </div>
+
+            <div class="col-md-0.5">
+                <input id="Subtract" name="Sign" type="radio" value="-">
+                <label for="Subtract">Trừ</label>
+            </div>
+        </div>
+        <!--//line 1-->
+
+        <!--line 2-->
+        <div class="row">
+            <div class="col-md-1">
+                <label for="SecondInput">Số thứ hai</label>
+            </div>
+
+            <div class="col-md-2.5">
+                <input id="SecondInput" name="SecondInput" type="text" onblur="checkValidate(this.form.SecondInput)">
+            </div>
+
+            <div class="col-md-1">
+                <input id="Multiply" name="Sign" type="radio" value="*">
+                <label for="Multiply">Nhân</label>
+            </div>
+
+            <div class="col-md-0.5">
+                <input id="Div" name="Sign" type="radio" value="/">
+                <label for="Div">Chia</label>
+            </div>
+        </div>
+        <!--//line 2-->
+
+        <!--line 3-->
+        <div class="row">
+            <div class="col-md-1">
+                <label for="Result">Kết quả</label>
+            </div>
+
+            <div class="col-md-2.5">
+                <input id="Result" name="Result" type="text" disabled>
+            </div>
+
+            <div class="col-md-1">
+                <input name="Calc" name="Calc" type="button" value="Tính" onclick="Calculate()">
+            </div>
+        </div>
+        <!--//line 3-->
+
+        <!--line 4-->
+        <div class="row">
+            <div class="col-md-1">
+                <label for="Error">Thông báo</label>
+            </div>
+
+            <div class="col-md" id="Error">
+
+            </div>
+        </div>
+        <!--//line 4-->
+    </form>
+</div>
